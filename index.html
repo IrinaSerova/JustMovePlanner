@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Move Planner</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="text-center">
+
+
+	<div class="container-fluid p-3">
+		<header>
+			<h3 class="float-md-left">JustMovePlanner</h3>
+			<div>
+				<form id="form-container" class="form-container float-md-right">
+					<label for="street">Street: </label>
+					<input type="text" id="street">
+					<label for="city">City: </label>
+					<input type="text" id="city">
+					<button id="submit-btn">Submit</button>
+					<hr class="d-block d-sm-none">
+				</form>
+
+			</div>
+
+		</header>
+	</div>
+
+
+
+
+	<div id="weather-frame" class="container p-3">
+
+
+
+		<div id="weather">
+			<h2 id="weather-header">WEATHER</h2>
+			<p id="cityName"></p>
+			<p id="ambientWeather"></p>
+			<img src="" id="iconDay">
+			<h1 id="temp"></h1>
+		</div>
+
+		<h2 id="greeting" class="greeting">Where do you want to live?</h2>
+
+
+	</div>
+	<div class="container-fluid" id="infoBoxes">
+		<div class="row">
+
+			<div class="col-md-6 wikipedia-container scroll">
+				<h3 id="wikipedia-header">Relevant Wikipedia Links</h3>
+				<ul id="wikipedia-links">Type in an address above and find relevant Wikipedia articles here!</ul>
+			</div>
+
+
+			<div class="col-md-6 nytimes-container scroll">
+				<h3 id="nytimes-header">New York Times Articles</h3>
+				<ul id="nytimes-articles" class="article-list">What's going on in your new city? Enter an address and hit submit and the NY Times will tell you here!</ul>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="inner">
+			<p>Copyright <a href="http://isserova.com"> Irina Serova</a> 2018</p>
+		</div>
+	</footer>
+	<script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+	<script src="js/script.js"></script>
+</body>
+
+</html>
