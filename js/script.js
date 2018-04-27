@@ -19,11 +19,11 @@ function loadData() {
 	var cityStr = $('#city').val();
 	var address = streetStr + ', ' + cityStr;
 
-	$greeting.text('So, you want to live at ' + address + '?');
+	$greeting.text('So, you want to live in ' + cityStr + '?');
 
 
 	// load streetview
-	var streetviewUrl = 'http://maps.googleapis.com/maps/api/streetview?size=600x400&location=' + address + '';
+	var streetviewUrl = 'http://maps.googleapis.com/maps/api/streetview?size=640x640&location=' + address + '';
 	$body.append('<img class="bgimg" src="' + streetviewUrl + '">');
 
 	// weather
@@ -102,26 +102,7 @@ function loadData() {
 			clearTimeout(wikiRequestTimeout);
 		}
 	});
-
-
-
-
-
 	return false;
 };
 
 $('#form-container').submit(loadData);
-
-
-//var fahrenheit = true; // assuming you start with C.  
-//var temp;
-//
-//$('#temp').click(function () {
-//			if (fahrenheit) {
-//
-//				temp = (temp - 32) * 5 / 9;
-//			} else {
-//				temp = (temp * 9 / 5) + 32;
-//			}
-//			return temp;
-//		}

@@ -12,14 +12,34 @@ header {
 	margin-bottom: 2rem;
 }
 
+
+/*
 #infoBoxes {
 	padding-right: 3em;
 }
+*/
 
 .bgimg {
-	max-width: 100%;
+	position: fixed;
+	top: 5em;
+	left: 0;
+	width: 100%;
 	z-index: -1;
 	opacity: 1;
+}
+
+
+/***************************
+****************************
+	Temperature Styles
+****************************
+***************************/
+
+#weather-frame {
+	background: rgba(0, 0, 0, 0.4);
+	color: #fff;
+	border-radius: 0.5em;
+	margin-top: 2em;
 }
 
 
@@ -60,6 +80,10 @@ header {
 .scroll {
 	height: 15em;
 	overflow-y: scroll;
+	background: rgba(0, 0, 0, 0.4);
+	color: #fff;
+	border-radius: 0.5em;
+	margin: 0.5em 1%;
 }
 
 .scroll::-webkit-scrollbar {
@@ -83,4 +107,34 @@ header {
 	background: rgba(255, 0, 0, 0.4);
 }
 
-@media (min-width: 576px) {}
+.col-md-6 {
+	max-width: 48%;
+}
+
+
+/***************************
+****************************
+	Media Queries Styles
+****************************
+***************************/
+
+@media (max-width: 768px) {
+	/*
+	#weather-frame {
+		margin-top: 2em;
+	}
+*/
+	/*
+	.col-md-6 {
+	max-width: 48%;
+}
+*/
+}
+
+@media (max-width: 576px) {
+	.bgimg {
+		height: 640px;
+		width: auto;
+		margin-top: 3.5em;
+	}
+}
