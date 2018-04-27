@@ -21,6 +21,20 @@ header {
 	color: #FFFFEA;
 }
 
+ul {
+	list-style-type: none;
+}
+
+li a {
+	color: #ECA400;
+	font-weight: 700;
+}
+
+li a:hover {
+	color: orangered;
+	font-weight: 900;
+}
+
 
 /*
 #infoBoxes {
@@ -60,6 +74,7 @@ header {
 
 #temp {
 	display: inline;
+	color: orangered;
 }
 
 #degree {
@@ -76,7 +91,7 @@ header {
 
 #degree:hover {
 	border: 1px solid #fff;
-	box-shadow: 6px 6px 20px -5px #59abe3;
+	box-shadow: 6px 6px 20px -5px orangered;
 }
 
 
@@ -114,6 +129,19 @@ header {
 
 scroll::-webkit-scrollbar-thumb:window-inactive {
 	background: #ECA400;
+}
+
+footer {
+	color: #FFFFEA;
+}
+
+footer a {
+	color: orangered;
+	font-weight: 700;
+}
+
+footer a:hover {
+	color: orange;
 }
 
 
