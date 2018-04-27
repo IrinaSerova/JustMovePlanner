@@ -9,6 +9,7 @@ body {
 	background-image: radial-gradient(circle, rgb(173, 202, 214), #006E90);
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
+	text-shadow: black 0.1em 0.1em 0.2em
 }
 
 input#city {
@@ -26,12 +27,12 @@ ul {
 }
 
 li a {
-	color: #ECA400;
+	color: wheat;
 	font-weight: 700;
 }
 
 li a:hover {
-	color: orangered;
+	color: sandybrown;
 	font-weight: 900;
 }
 
