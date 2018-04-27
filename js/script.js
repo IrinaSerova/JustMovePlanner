@@ -96,7 +96,7 @@ function loadData() {
 
 			for (var i = 0; i < articleList.length; i++) {
 				articleStr = articleList[i];
-				var url = 'http://en.wikipedia.org/wiki/' + articleStr;
+				var url = 'https://en.wikipedia.org/wiki/' + articleStr;
 				$wikiElem.append('<li><a href="' + url + '">' + articleStr + '</a></li>');
 			};
 
