@@ -18,6 +18,7 @@ input#city {
 header {
 	margin-bottom: 2rem;
 	font-family: 'Crete Round', serif;
+	color: #FFFFEA;
 }
 
 
@@ -107,20 +108,13 @@ header {
 .scroll::-webkit-scrollbar-thumb {
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
-	background: rgba(255, 0, 0, 0.8);
+	background: #ECA400;
 	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
-::-webkit-scrollbar-thumb:window-inactive {
-	background: rgba(255, 0, 0, 0.4);
+scroll::-webkit-scrollbar-thumb:window-inactive {
+	background: #ECA400;
 }
-
-
-/*
-.col-md-6 {
-	max-width: 48%;
-}
-*/
 
 
 /***************************
