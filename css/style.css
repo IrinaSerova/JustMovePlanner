@@ -131,6 +131,13 @@ scroll::-webkit-scrollbar-thumb:window-inactive {
 	background: #ECA400;
 }
 
+
+/***************************
+****************************
+	  Footer Styles
+****************************
+***************************/
+
 footer {
 	color: #FFFFEA;
 	margin: 2em auto;
