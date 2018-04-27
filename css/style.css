@@ -88,7 +88,7 @@ header {
 	background: rgba(0, 0, 0, 0.4);
 	color: #fff;
 	border-radius: 0.5em;
-	margin: 0.5em 1%;
+	margin: 0.5em 0;
 }
 
 .scroll::-webkit-scrollbar {
@@ -112,9 +112,12 @@ header {
 	background: rgba(255, 0, 0, 0.4);
 }
 
+
+/*
 .col-md-6 {
 	max-width: 48%;
 }
+*/
 
 
 /***************************
