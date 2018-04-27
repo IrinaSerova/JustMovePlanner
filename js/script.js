@@ -58,7 +58,7 @@ function loadData() {
 		$('#cityName').text(data['name']);
 		$('#ambientWeather').text(data['weather'][0]['description']);
 		var iconCode = data['weather'][0]["icon"]
-		var iconUrl = "http://openweathermap.org/img/w/" + iconCode + ".png";
+		var iconUrl = "https://openweathermap.org/img/w/" + iconCode + ".png";
 		console.log(iconUrl);
 		$('#iconDay').attr("src", iconUrl);
 		$('#temp').text(data["main"]["temp"]);
