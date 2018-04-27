@@ -133,6 +133,7 @@ scroll::-webkit-scrollbar-thumb:window-inactive {
 
 footer {
 	color: #FFFFEA;
+	margin: 2em auto;
 }
 
 footer a {
