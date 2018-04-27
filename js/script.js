@@ -15,6 +15,7 @@ function loadData() {
 	$wikiElem.text("");
 	$nytElem.text("");
 
+
 	var streetStr = $('#street').val();
 	var cityStr = $('#city').val();
 	var address = streetStr + ', ' + cityStr;
@@ -23,13 +24,13 @@ function loadData() {
 
 
 	// load streetview
-	var streetviewUrl = 'http://maps.googleapis.com/maps/api/streetview?size=640x640&location=' + address + '';
+	var streetviewUrl = 'https://maps.googleapis.com/maps/api/streetview?size=640x640&location=' + address + '';
 	$body.append('<img class="bgimg" src="' + streetviewUrl + '">');
 
 	// weather
 
 	// NY Times Articles
-	var nytimesUrl = 'http://api.nytimes.com/svc/search/v2/articlesearch.json?q=' + cityStr + '&sort=newest&api-key=15188a0c2e7a489eb9f1af00c9d6268f'
+	var nytimesUrl = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?q=' + cityStr + '&sort=newest&api-key=15188a0c2e7a489eb9f1af00c9d6268f'
 
 
 	$.getJSON(nytimesUrl, function (data) {
@@ -50,7 +51,7 @@ function loadData() {
 		});
 
 
-	$.getJSON('http://api.openweathermap.org/data/2.5/weather?q=' + cityStr + '&mode=json&units=imperial&APPID=a65f04b4e8bf4d1784e54d5d8d02f693', function (data) {
+	$.getJSON('https://api.openweathermap.org/data/2.5/weather?q=' + cityStr + '&mode=json&units=imperial&APPID=a65f04b4e8bf4d1784e54d5d8d02f693', function (data) {
 		$weatherHeaderElem.text('Weather in ' + cityStr);
 		//		document.write(JSON.stringify(json));
 		console.log(data);
@@ -81,7 +82,7 @@ function loadData() {
 	// Wikipedia AJAX request
 
 	// load wikipedia data
-	var wikiUrl = 'http://en.wikipedia.org/w/api.php?action=opensearch&search=' + cityStr + '&format=json&callback=wikiCallback';
+	var wikiUrl = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + cityStr + '&format=json&callback=wikiCallback';
 	var wikiRequestTimeout = setTimeout(function () {
 		$wikiElem.text("failed to get wikipedia resources");
 	}, 8000);
