@@ -50,49 +50,32 @@ function loadData() {
 		});
 
 
-	$.getJSON('http://api.openweathermap.org/data/2.5/weather?q=' + cityStr + '&mode=json&units=imperial&APPID=a65f04b4e8bf4d1784e54d5d8d02f693', function (json) {
+	$.getJSON('http://api.openweathermap.org/data/2.5/weather?q=' + cityStr + '&mode=json&units=imperial&APPID=a65f04b4e8bf4d1784e54d5d8d02f693', function (data) {
 		$weatherHeaderElem.text('Weather in ' + cityStr);
 		//		document.write(JSON.stringify(json));
-		console.log(json);
-		$('#cityName').text(json['name']);
-		$('#ambientWeather').text(json['weather'][0]['description']);
-		var iconCode = json['weather'][0]["icon"]
+		console.log(data);
+		$('#cityName').text(data['name']);
+		$('#ambientWeather').text(data['weather'][0]['description']);
+		var iconCode = data['weather'][0]["icon"]
 		var iconUrl = "http://openweathermap.org/img/w/" + iconCode + ".png";
 		console.log(iconUrl);
 		$('#iconDay').attr("src", iconUrl);
-		$('#temp').text(json["main"]["temp"]);
+		$('#temp').text(data["main"]["temp"]);
+
 	});
+	$('#degree').click(function () {
+		var text = $(this).text();
+		if (text == '°F') {
+			var f = parseInt($('#temp').text());
 
-
-	// weather
-	//	var owUrl = 'http://openweathermap.org/data/2.5/forecast?q=' + cityStr + '&appid=a65f04b4e8bf4d1784e54d5d8d02f693';
-	//	var owUrl = 'openweathermap.org/data/2.5/forecast?q=London,us&mode=xml' + '&appid=a65f04b4e8bf4d1784e54d5d8d02f693';
-	//
-	//
-	//
-	//	$.getJSON(owUrl, function (data) {
-	//			$weatherHeaderElem.text('Weather in ' + cityStr);
-	//
-	//
-	//			
-	//			$('#weather-detail-main').html(data.weather[0].main);
-	//			$('#weather-detail-small').html(data.weather[0].description.replace(/\w\S*/g, function (c) {
-	//				return c.charAt(0).toUpperCase() + c.substr(1).toLowerCase();
-	//			}));
-	//			setIcon(data.weather[0].icon);
-	//			$('#weather-icon').attr('src', "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png");
-	//			temp = data.main.temp;
-	//			setTempAsC();
-	//
-	//		})
-	//		.error(function (e) {
-	//			$weatherHeaderElem.text('Weather in ' + cityStr + 'Could Not Be Loaded');
-	//		});
-
-
-
-
-
+			$('#temp').text(Math.round((f - 32) * (5 / 9)));
+			$(this).text('°C');
+		} else {
+			var c = parseInt($('#temp').text());
+			$('#temp').text(Math.round(c * (9 / 5) + 32));
+			$(this).text('°F');
+		}
+	});
 
 
 	// Wikipedia AJAX request
@@ -128,3 +111,17 @@ function loadData() {
 };
 
 $('#form-container').submit(loadData);
+
+
+//var fahrenheit = true; // assuming you start with C.  
+//var temp;
+//
+//$('#temp').click(function () {
+//			if (fahrenheit) {
+//
+//				temp = (temp - 32) * 5 / 9;
+//			} else {
+//				temp = (temp * 9 / 5) + 32;
+//			}
+//			return temp;
+//		}

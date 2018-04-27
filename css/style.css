@@ -30,18 +30,22 @@ header {
 ***************************/
 
 #temp {
-	padding-top: 1em;
-	font-size: 1.5em;
+	display: inline;
+}
+
+#degree {
+	font-size: 0.5em;
 	width: 3.5em;
 	height: 3.5em;
+	padding: 0.3em;
 	margin: 0 auto;
 	border-radius: 100%;
-	border: 1px solid #59abe3;
+	border: 1px solid #ccc;
 	cursor: pointer;
 	transition-duration: 0.5s;
 }
 
-#temp:hover {
+#degree:hover {
 	border: 1px solid #fff;
 	box-shadow: 6px 6px 20px -5px #59abe3;
 }
