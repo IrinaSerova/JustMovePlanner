@@ -24,7 +24,7 @@ function loadData() {
 
 
 	// load streetview
-	var streetviewUrl = 'https://maps.googleapis.com/maps/api/streetview?size=640x640&location=' + address + '';
+	var streetviewUrl = 'http://maps.googleapis.com/maps/api/streetview?size=640x640&location=' + address + '';
 	$body.append('<img class="bgimg" src="' + streetviewUrl + '">');
 
 	// weather
